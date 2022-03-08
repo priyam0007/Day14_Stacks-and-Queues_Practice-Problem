@@ -1,5 +1,9 @@
 package com.blz.StackandQueueJava;
 
+/*
+ * @author Priya
+ * Purpose to create the queue using linked list and adding and deleting elements from it
+ */
 public class Queue {
 	Node front;
 	Node rear;
@@ -31,6 +35,17 @@ public class Queue {
 
 	}
 
+	// Delete Data From Queue
+	public void deQueue() {
+		if (front != null) {
+			int temp = front.key;
+			front = front.next;
+			length--;
+			return;
+		}
+
+	}
+
 	// Print method
 	public void display() {
 		Node temp = front;
@@ -48,6 +63,10 @@ public class Queue {
 		queue.enQueue(56);
 		queue.enQueue(30);
 		queue.enQueue(70);
+		queue.display();
+		System.out.println();
+		System.out.println("After deleting element from the queue");
+		queue.deQueue();
 		queue.display();
 
 	}
