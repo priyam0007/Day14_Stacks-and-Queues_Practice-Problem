@@ -57,7 +57,8 @@ public class Stack {
 	}
 
 	// Utility function to pop top element from the stack
-	public void pop() { // remove at the beginning
+	public void pop() // remove at the beginning
+	{
 		// check for stack underflow
 		if (top == null) {
 			System.out.print("\nStack Underflow");
@@ -74,6 +75,7 @@ public class Stack {
 			System.out.print(temp.data + "-> ");
 			temp = temp.next;
 		}
+
 	}
 
 	public static void main(String[] args) {
@@ -104,4 +106,5 @@ public class Stack {
 		stack.display();
 		System.out.printf("\nTop element is %d\n", stack.peek());
 	}
+
 }
